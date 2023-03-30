@@ -1,0 +1,28 @@
+MySQL: # For link storage
+  address: 0.0.0.0
+  port: 3306
+  database: database1
+  username: database1
+  password: 'password'
+discordBotToken: ""
+codeTimeValid: 3600 #how long a link code will be valid in seconds
+verifiedRoleName: "Verified" #name of verified discord role
+ranksToRoles: #ordered from the highest priority to lowest, all lower will also be added if higher found, in form LuckPermGroupName:DiscordRoleName
+  - "ULT:Ultimate"
+  - "HERO:Hero"
+  - "APR:Apprentice"
+msg:
+  rolesAdded: "Link and roles added successfully"
+  rolesRemoved: "Link deleted and roles removed successfully"
+  linkExpiredInvalid: "Link expired or invalid"
+  mustBePlayer: "Must be player to link/unlink"
+  discordNotLinked: "This account is not linked"
+  discordAlreadyLinked: "This account is already linked"
+  notDonor: "No linkable rank detected"
+  codeGiven: "Go to discord and do /link {code} to complete link"
+  lookUp:
+    noLink: "Given user does not have a linked discord"
+    linkSnowflake: "Linked discord snowflake id is {snowflake}"
+    linkUUID: "Linked UUID is {UUID}"
+    noLinkSnowflake: "Discord snowflake id {snowflake} not linked"
+    invalidEntry: "{lookup} was not found as a online minecraft username, a minecraft UUID or a snowflake"

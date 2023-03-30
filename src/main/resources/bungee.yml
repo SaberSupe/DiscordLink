@@ -1,0 +1,17 @@
+name: DiscordLink
+version: '${project.version}'
+main: saber.discordlink.DiscordLink
+commands:
+  link:
+    description: "Provides the player with a code to link a discord account"
+  unlink:
+    description: "Unlinks the minecraft account from a discord account"
+  lookup:
+    description: "Allow the player to /lookup links"
+permissions:
+  discordLink.lookup:
+    description: "Allows the player to use /lookup"
+    defaults: op
+  discordLink.link:
+    description: "Allows a player to link their discord account"
+    defaults: true
