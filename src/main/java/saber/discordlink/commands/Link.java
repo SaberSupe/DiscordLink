@@ -25,6 +25,11 @@ public class Link extends Command {
 
         ProxiedPlayer player = (ProxiedPlayer) commandSender;
 
+        if (!player.hasPermission("discordLink.link")){
+            player.sendMessage(new TextComponent(plugin.getConfig().getString("msg.noPerms")));
+            return;
+        }
+
         if (plugin.getDataManager().getSnowflake(player.getUniqueId()) != -1){
             player.sendMessage(new TextComponent(plugin.getConfig().getString("msg.discordAlreadyLinked")));
             return;

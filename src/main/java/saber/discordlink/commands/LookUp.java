@@ -17,6 +17,12 @@ public class LookUp extends Command {
 
     @Override
     public void execute(CommandSender commandSender, String[] strings) {
+
+        if (!commandSender.hasPermission("discordLink.lookup")){
+            commandSender.sendMessage(new TextComponent(plugin.getConfig().getString("msg.noPerms")));
+            return;
+        }
+
         if (strings.length == 0){
             commandSender.sendMessage(new TextComponent("Too few args"));
             return;

@@ -22,6 +22,11 @@ public class Unlink extends Command {
 
         ProxiedPlayer player = (ProxiedPlayer) commandSender;
 
+        if (!player.hasPermission("discordLink.link")){
+            player.sendMessage(new TextComponent(plugin.getConfig().getString("msg.noPerms")));
+            return;
+        }
+
         long snowflake = plugin.getDataManager().getSnowflake(player.getUniqueId());
         if (snowflake == -1){
             player.sendMessage(new TextComponent(plugin.getConfig().getString("msg.discordNotLinked")));

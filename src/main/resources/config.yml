@@ -12,6 +12,7 @@ ranksToRoles: #ordered from the highest priority to lowest, all lower will also 
   - "HERO:Hero"
   - "APR:Apprentice"
 msg:
+  noPerms: "You do not have permission to use this command"
   rolesAdded: "Link and roles added successfully"
   rolesRemoved: "Link deleted and roles removed successfully"
   linkExpiredInvalid: "Link expired or invalid"
